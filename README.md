@@ -1,44 +1,95 @@
-# architecture-generator
+# Clean-Architecture Plugin
 
-![Build](https://github.com/palmerovicdev/architecture-generator/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+Generate the Clean-Architecture directory structure from Robert C. Martin (Uncle Bob) in your flutter projects.
+It is inspired by @ResoCoder [Clean Architecture for Flutter Course](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course).
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties), [plugin ID](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `PLUGIN_ID` in the above README badges.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## How To Install
+- Android Studio / IntelliJ IDEA -> Plugins -> Browse repositories
+- Search: Clean Architecture for Flutter
+- Install
+- Restart IDE
 
-<!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+## How To Use
+- Right click on or anywhere in your destination folder
+- New -> Clean Generator -> Flutter/Spring/Hexagonal/Onion/Mvc
+- Enter [feature_name] in the dialog or let it be empty to create structure in current directory (Flutter and Hexagonal cases)
+- Optional: Use the checkbox to split the data_sources folder into local and remote (Flutter case)
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+Right-click | Enter [feature_name]                   | generated  
+------------ |----------------------------------------| -------------
+![context menu](/assets/01-Screen.png) | ![context menu](/assets/02-Screen.png) | ![context menu](/assets/03-Screen.png)
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
-<!-- Plugin description end -->
+## What will be created
 
-## Installation
+### Flutter case
+- [feature_name]
+    - data
+        - [Two variants]
+            - [Checkbox checked]
+                - local
+                    - data_sources
+                    - models
+                - remote
+                    - data_sources
+                    - models
+            - [Checkbox unchecked]
+                - data_sources
+                - models
+        - repositories
+    - domain
+        - entities
+        - use_cases
+        - repositories
+    - presentation
+        - manager
+        - pages
+        - widgets
 
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "architecture-generator"</kbd> >
-  <kbd>Install</kbd>
-  
-- Manually:
+### Spring case
+- config
+- middelware
+- controller
+- repository
+- model
+  - entity
+  - request
+  - response
+- service
+- util
+- core
+  - enum
+  - common
 
-  Download the [latest release](https://github.com/palmerovicdev/architecture-generator/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+### Hexagonal case
+- infrastructure
+  - adapter.input
+  - adapter.output
+  - repository
+  - entity
+  - mapper
+- application
+  - port.input
+  - port.output
+  - service
+- domain
+  - model
+- common
+  - enum
+  - interface
 
+### Onion case
+- presentation
+- persistence
+- infrastructure
+- application-services
+    - domain-services
+    - domain-models
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+### Mvc case
+- model
+- vire
+- controller
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+## Source
+- https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
+- https://resocoder.com/2019/08/27/flutter-tdd-clean-architecture-course-1-explanation-project-structure/

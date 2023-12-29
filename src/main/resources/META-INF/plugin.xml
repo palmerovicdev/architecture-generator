@@ -1,18 +1,37 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.palmerovicdev.architecturegenerator</id>
-    <name>architecture-generator Template</name>
+    <name>Architecture Generator</name>
     <vendor>palmerovicdev</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.palmerovicdev.architecturegenerator.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-    </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.palmerovicdev.architecturegenerator.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+        <group class="com.github.palmerovicdev.architecturegenerator.action.ActionGroup"
+               description="Choose an Architecture variant"
+               id="com.github.palmerovicdev.architecturegenerator" popup="true"
+               text="Generator">
+            <add-to-group anchor="after"
+                          group-id="NewGroup" relative-to-action="NewDir" />
+            <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateFlutter"
+                    description="Generate a new Clean-Architecture for Flutter"
+                    id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateFlutter"
+                    text="Clean-Flutter"/>
+            <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateSpring"
+                    description="Generate a new Clean-Architecture for Spring"
+                    id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateSpring"
+                    text="Clean-Spring"/>
+            <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateHex"
+                    description="Generate an Hexagonal-Architecture"
+                    id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateHex"
+                    text="Hexagonal"/>
+            <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateOnion"
+                    description="Generate an Onion-Architecture"
+                    id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateOnion"
+                    text="Onion"/>
+            <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateMvc"
+                    description="Generate an Mvc-Architecture"
+                    id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateMvc"
+                    text="Mvc"/>
+        </group>
+    </actions>
 </idea-plugin>
