@@ -1,7 +1,6 @@
 package com.github.palmerovicdev.architecturegenerator.ui.Hexagonal
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import javax.swing.JCheckBox
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JTextField
