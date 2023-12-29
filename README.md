@@ -1,7 +1,7 @@
-# Clean-Architecture Plugin
+# Architecture Plugin
 
-Generate the Clean-Architecture directory structure from Robert C. Martin (Uncle Bob) in your flutter projects.
-It is inspired by @ResoCoder [Clean Architecture for Flutter Course](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course).
+Generate the Architecture directory structure for 5 diferents architecture patterns in your project.
+It is based on Clean-Architecture Plugin of [Tyxz](https://github.com/Tyxz/clean_architecture_plugin).
 
 ## How To Install
 - Android Studio / IntelliJ IDEA -> Plugins -> Browse repositories
@@ -15,9 +15,9 @@ It is inspired by @ResoCoder [Clean Architecture for Flutter Course](https://git
 - Enter [feature_name] in the dialog or let it be empty to create structure in current directory (Flutter and Hexagonal cases)
 - Optional: Use the checkbox to split the data_sources folder into local and remote (Flutter case)
 
-Right-click | Enter [feature_name]                   | generated  
------------- |----------------------------------------| -------------
-![context menu](/assets/01-Screen.png) | ![context menu](/assets/02-Screen.png) | ![context menu](/assets/03-Screen.png)
+| Right-click                           | Go to new                             | Go to generate and click              |
+|---------------------------------------|---------------------------------------|---------------------------------------|
+| ![context menu](/asset/01-Screen.png) | ![context menu](/asset/02-Screen.png) | ![context menu](/asset/03-Screen.png) |
 
 ## What will be created
 
@@ -89,7 +89,3 @@ Right-click | Enter [feature_name]                   | generated
 - model
 - vire
 - controller
-
-## Source
-- https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
-- https://resocoder.com/2019/08/27/flutter-tdd-clean-architecture-course-1-explanation-project-structure/
