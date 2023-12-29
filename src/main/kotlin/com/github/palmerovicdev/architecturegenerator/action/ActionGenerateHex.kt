@@ -1,13 +1,14 @@
 package com.github.palmerovicdev.architecturegenerator.action
 
 import com.github.palmerovicdev.architecturegenerator.generator.Generator
-import com.github.palmerovicdev.architecturegenerator.ui.Flutter.FeatureDialog
+import com.github.palmerovicdev.architecturegenerator.ui.Hexagonal.FeatureDialog
 import com.intellij.openapi.actionSystem.*
 import com.intellij.openapi.command.WriteCommandAction
 
 class ActionGenerateHex : AnAction() {
     override fun actionPerformed(actionEvent: AnActionEvent) {
         val dialog = FeatureDialog(actionEvent.project)
+        dialog.setSize(100, 50)
         if (dialog.showAndGet()) {
             generate(actionEvent.dataContext, dialog.getName())
         }

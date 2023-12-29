@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="fa116" class="javax.swing.JTextField" binding="nameTextField">
+      <component id="fa116" class="javax.swing.JTextField" binding="feature">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="200" height="-1"/>

@@ -1,6 +1,10 @@
 package com.github.palmerovicdev.architecturegenerator.ui.Hexagonal
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.openapi.ui.VerticalFlowLayout
+import java.awt.BorderLayout
+import java.awt.GridBagLayout
+import javax.swing.JCheckBox
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JTextField
@@ -8,27 +12,26 @@ import javax.swing.JTextField
 class FeatureDialog(project: Project?) :
     DialogWrapper(project) {
     private var contentPanel: JPanel? = null
-    private var nameTextField: JTextField? = null
+    private var feature: JTextField? = null
 
-    fun getName(): String? = nameTextField?.text
+    fun getName(): String? = feature?.text
 
     override fun createCenterPanel(): JComponent? {
         if (contentPanel == null) {
             // Initialize contentPanel
             contentPanel = JPanel()
-
-            // Initialize other components
-            nameTextField = JTextField()
-
-            // Add components to contentPanel
-            contentPanel?.add(nameTextField)
+            contentPanel?.setSize(100, 150)
+            contentPanel?.layout = VerticalFlowLayout()
+            contentPanel?.add(JTextField("Feature Name:"))
+            feature = JTextField()
+            contentPanel?.add(feature)
         }
         return contentPanel
     }
 
 
     override fun getPreferredFocusedComponent(): JComponent? {
-        return nameTextField
+        return feature
     }
 
     init {

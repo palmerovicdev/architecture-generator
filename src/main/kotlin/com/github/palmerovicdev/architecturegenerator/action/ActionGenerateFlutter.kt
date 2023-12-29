@@ -9,6 +9,7 @@ import com.intellij.openapi.vfs.VirtualFile
 class ActionGenerateFlutter : AnAction() {
     override fun actionPerformed(actionEvent: AnActionEvent) {
         val dialog = FeatureDialog(actionEvent.project)
+        dialog.setSize(100, 50)
         if (dialog.showAndGet()) {
             generate(actionEvent.dataContext, dialog.getName(), dialog.splitSource())
         }

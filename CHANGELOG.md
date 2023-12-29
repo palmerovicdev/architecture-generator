@@ -2,15 +2,24 @@
 
 # architecture-generator Changelog
 
+## [1.0.6] - 2023-12-29
+
+### Fixed
+
+- Fixed bug that caused the dialog to display incorrectly in the flutter and hexagonal plugin.
+
 ## [1.0.5] - 2023-12-29
 
 ### Added
+
 - Add spring, hexagonal, onion, mvc generator based on  [Tyxz](https://github.com/Tyxz/clean_architecture_plugin).
 
 ### Improved
+
 - Improve project documentation.
 
 ### Fixed
+
 - Fix flutter generator bug to show the dialog.
 - Fix hexagonal generator bug to show the dialog.
 - Fix flutter generator bug when the checkbox is unchecked.
@@ -18,5 +27,6 @@
 ## [Unreleased]
 
 #### Added
+
 - Add flutter generator based on  [Tyxz](https://github.com/Tyxz/clean_architecture_plugin).
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
