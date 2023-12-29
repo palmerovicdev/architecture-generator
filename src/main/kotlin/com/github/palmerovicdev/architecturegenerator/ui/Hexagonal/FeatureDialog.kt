@@ -2,9 +2,6 @@ package com.github.palmerovicdev.architecturegenerator.ui.Hexagonal
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.VerticalFlowLayout
-import java.awt.BorderLayout
-import java.awt.GridBagLayout
-import javax.swing.JCheckBox
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JTextField

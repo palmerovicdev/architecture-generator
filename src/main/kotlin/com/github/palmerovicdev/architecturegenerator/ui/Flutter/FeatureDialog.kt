@@ -2,7 +2,6 @@ package com.github.palmerovicdev.architecturegenerator.ui.Flutter
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.VerticalFlowLayout
-import java.awt.GridBagLayout
 import javax.swing.JCheckBox
 import javax.swing.JComponent
 import javax.swing.JPanel
