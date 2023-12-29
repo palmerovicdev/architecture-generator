@@ -1,7 +1,7 @@
 # Architecture Plugin
 
 <!-- Plugin description -->
-Generate the Architecture directory structure for 5 diferents architecture patterns in your project.
+This plugin, inspired by the Clean-Architecture Plugin developed by Tyxz, provides a powerful tool for generating directory structures for five distinct architectural patterns directly within your project. Whether you're working, this plugin can streamline your development process by automatically creating the necessary directory structure based on the chosen architectural pattern. With this plugin, you can focus more on writing code and less on setting up your project's directory structure.
 
 It is based on Clean-Architecture Plugin of [Tyxz](https://github.com/Tyxz/clean_architecture_plugin).
 <!-- Plugin description end -->
