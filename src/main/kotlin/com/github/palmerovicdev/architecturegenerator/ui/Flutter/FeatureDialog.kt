@@ -4,6 +4,7 @@ import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.VerticalFlowLayout
 import javax.swing.JCheckBox
 import javax.swing.JComponent
+import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JTextField
 
@@ -22,7 +23,7 @@ class FeatureDialog(project: Project?) :
             contentPanel = JPanel()
             contentPanel?.setSize(100, 150)
             contentPanel?.layout = VerticalFlowLayout()
-            contentPanel?.add(JTextField("Feature Name:"))
+            contentPanel?.add(JLabel("Feature Name:"))
             nameTextField = JTextField()
             contentPanel?.add(nameTextField)
             splitDataSource = JCheckBox("Split data source?")

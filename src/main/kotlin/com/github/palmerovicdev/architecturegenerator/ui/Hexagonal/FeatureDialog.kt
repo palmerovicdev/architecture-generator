@@ -3,6 +3,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.VerticalFlowLayout
 import javax.swing.JComponent
+import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JTextField
 
@@ -19,7 +20,7 @@ class FeatureDialog(project: Project?) :
             contentPanel = JPanel()
             contentPanel?.setSize(100, 150)
             contentPanel?.layout = VerticalFlowLayout()
-            contentPanel?.add(JTextField("Feature Name:"))
+            contentPanel?.add(JLabel("Feature Name:"))
             feature = JTextField()
             contentPanel?.add(feature)
         }
