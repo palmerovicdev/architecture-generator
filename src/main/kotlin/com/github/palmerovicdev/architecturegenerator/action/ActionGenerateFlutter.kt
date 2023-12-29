@@ -20,7 +20,7 @@ class ActionGenerateFlutter : AnAction() {
 
         var folder = if (selected.isDirectory) selected else selected.parent
         WriteCommandAction.runWriteCommandAction(project) {
-            if (root != null && root.isNotBlank()) {
+            if (!root.isNullOrBlank()) {
                 val result = Generator.createFolder(
                     project, folder, root
                 ) ?: return@runWriteCommandAction

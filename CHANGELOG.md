@@ -2,16 +2,20 @@
 
 # architecture-generator Changelog
 
-## [Released]
-### 1.0.2
-#### Improved
+## [Released] 1.0.4
+### Fixed
+- Fix flutter generator bug to show the dialog.
+- Fix hexagonal generator bug to show the dialog.
+
+## [Released] 1.0.3
+### Improved
 - Improve project documentation.
 
-### 1.0.1
-#### Added
+## [Released] 1.0.1
+### Added
 - Add spring, hexagonal, onion, mvc generator based on  [Tyxz](https://github.com/Tyxz/clean_architecture_plugin).
 
-#### Fixed
+### Fixed
 - Fix flutter generator bug when the checkbox is unchecked.
 
 ## [Unreleased]

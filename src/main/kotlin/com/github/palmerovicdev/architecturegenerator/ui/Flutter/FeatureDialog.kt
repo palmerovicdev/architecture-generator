@@ -16,8 +16,21 @@ class FeatureDialog(project: Project?) :
     fun splitSource(): Boolean? = splitDataSource?.isSelected
 
     override fun createCenterPanel(): JComponent? {
+        if (contentPanel == null) {
+            // Initialize contentPanel
+            contentPanel = JPanel()
+
+            // Initialize other components
+            nameTextField = JTextField()
+            splitDataSource = JCheckBox("Split Data Source")
+
+            // Add components to contentPanel
+            contentPanel?.add(nameTextField)
+            contentPanel?.add(splitDataSource)
+        }
         return contentPanel
     }
+
 
     override fun getPreferredFocusedComponent(): JComponent? {
         return nameTextField

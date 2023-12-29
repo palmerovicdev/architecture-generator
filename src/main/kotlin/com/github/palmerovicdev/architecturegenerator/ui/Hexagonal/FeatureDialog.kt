@@ -10,14 +10,23 @@ class FeatureDialog(project: Project?) :
     DialogWrapper(project) {
     private var contentPanel: JPanel? = null
     private var nameTextField: JTextField? = null
-    private var splitDataSource: JCheckBox? = null
 
     fun getName(): String? = nameTextField?.text
-    fun splitSource(): Boolean? = splitDataSource?.isSelected
 
     override fun createCenterPanel(): JComponent? {
+        if (contentPanel == null) {
+            // Initialize contentPanel
+            contentPanel = JPanel()
+
+            // Initialize other components
+            nameTextField = JTextField()
+
+            // Add components to contentPanel
+            contentPanel?.add(nameTextField)
+        }
         return contentPanel
     }
+
 
     override fun getPreferredFocusedComponent(): JComponent? {
         return nameTextField
