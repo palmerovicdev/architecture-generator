@@ -2,6 +2,14 @@
 
 # architecture-generator Changelog
 
+## [1.0.7] - 2024-01-07
+
+### Fixed
+- Fixed the bug that caused folders with dots in their name to be generated in the hexagonal architecture
+
+### Added
+- Added MVVM architecture with features creation
+
 ## [1.0.6] - 2023-12-29
 
 ### Fixed
@@ -21,7 +29,7 @@
 ### Fixed
 
 - Fix flutter generator bug to show the dialog.
-- Fix hexagonal generator bug to show the dialog.
+- Fix hexagonal generator's bug to show the dialog.
 - Fix flutter generator bug when the checkbox is unchecked.
 
 ## [Unreleased]
