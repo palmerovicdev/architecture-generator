@@ -35,9 +35,13 @@
                     id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateOnion"
                     text="Onion"/>
             <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateMvc"
-                    description="Generate an Mvc-Architecture"
+                    description="Generate a Mvc-Architecture"
                     id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateMvc"
                     text="Mvc"/>
+            <action class="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateMvvm"
+                    description="Generate a Mvvm-Architecture"
+                    id="com.github.palmerovicdev.architecturegenerator.action.ActionGenerateMvvm"
+                    text="Mvvm"/>
         </group>
     </actions>
 </idea-plugin>
