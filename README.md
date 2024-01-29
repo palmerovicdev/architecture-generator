@@ -8,7 +8,7 @@ It is based on Clean-Architecture Plugin of [Tyxz](https://github.com/Tyxz/clean
 
 ## How To Install
 - Android Studio / IntelliJ IDEA -> Plugins -> Browse repositories
-- Search: Clean Architecture for Flutter
+- Search: Architecture Generator
 - Install
 - Restart IDE
 
