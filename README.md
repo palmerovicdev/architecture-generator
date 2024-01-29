@@ -56,14 +56,16 @@ It is based on Clean-Architecture Plugin of [Tyxz](https://github.com/Tyxz/clean
 
 ### Hexagonal case
 - infrastructure
-  - adapter.input
-  - adapter.output
+  - adapter
+      - input
+      - output
   - repository
   - entity
   - mapper
 - application
-  - port.input
-  - port.output
+  - port
+      - input
+      - output
   - service
 - domain
   - model
