@@ -14,7 +14,7 @@ It is based on Clean-Architecture Plugin of [Tyxz](https://github.com/Tyxz/clean
 
 ## How To Use
 - Right click on or anywhere in your destination folder
-- New -> Clean Generator -> Flutter/Spring/Hexagonal/Onion/Mvc
+- New -> Generate -> Flutter/Spring/Hexagonal/Onion/Mvc
 - Enter [feature_name] in the dialog or let it be empty to create structure in current directory (Flutter and Hexagonal cases)
 - Optional: Use the checkbox to split the data_sources folder into local and remote (Flutter case)
 
