@@ -27,17 +27,8 @@ It is based on Clean-Architecture Plugin of [Tyxz](https://github.com/Tyxz/clean
 ### Flutter case
 - [feature_name]
     - data
-        - [Two variants]
-            - [Checkbox checked]
-                - local
-                    - data_sources
-                    - models
-                - remote
-                    - data_sources
-                    - models
-            - [Checkbox unchecked]
-                - data_sources
-                - models
+        - data_sources
+        - models
         - repositories
     - domain
         - entities
