@@ -1,6 +1,8 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
 # architecture-generator Changelog
+## [1.0.8] - 2024-04-10
+- Add comaptibility with IntelliJ IDEA 2024.1
 
 ## [1.0.7] - 2024-01-07
 
